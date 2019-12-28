@@ -14,7 +14,8 @@ int correctButtonVal = 0;//variable to store the CORRECT value from button - 0 m
 const int analogPotentiometerPin = 0;//the analog input pin of potentiometer
 const int ledPotPin = 9;
 int inputPotVal = 0;//variable to store the analog value coming from potentiometer
-int outputLedPotVal = 0;//variable to store the output value (after being mapped)
+int outputLedPotVal = 0;//variable to store the output value (after being mapped to 0-255)
+int outputToMax = 0;//variable to store the output value to max - mapped from outputLedPotVal from 0-1000
 
 //_______________________________________________________________________________
 
@@ -56,10 +57,14 @@ void loop()
   Serial.println(inputPotVal);
   
   //outputLedPotVal = map(inputPotVal, 0, 1023, 0, 255); // Convert from 0-1023 proportional to the number of a number of from 0 to 255
-  outputLedPotVal = map(inputPotVal, 0, 658, 0, 255); // Calibrated to 658 - tested max analog reading of potentiometer
+  outputLedPotVal = map(inputPotVal, 0, 656, 0, 255); // Calibrated to 656 - tested max analog reading of potentiometer
+  outputToMax = map(outputLedPotVal, 0, 255, 0, 1000); // mapped from 0 to 1000 to be received by max via serial comms
 
   Serial.print("Output to LED: ");
   Serial.println(outputLedPotVal);
+  
+  Serial.print("Output to MAX: ");
+  Serial.println(outputToMax);
   
   analogWrite(ledPotPin, outputLedPotVal); //tune the brightness of LED according to the potentiometer value
 
