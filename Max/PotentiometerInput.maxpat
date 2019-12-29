@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 76.0, 1184.0, 715.0 ],
+		"rect" : [ 386.0, 154.0, 583.0, 583.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,78 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-130",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 711.461584329605103, 129.709940433502197, 50.0, 22.0 ],
+					"text" : "7.2506"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"annotation" : "slider (simulated arduino o/p)\n",
+					"elementcolor" : [ 0.823529411764706, 0.976470588235294, 0.909803921568627, 1.0 ],
+					"floatoutput" : 1,
+					"id" : "obj-129",
+					"knobcolor" : [ 0.03921568627451, 0.901960784313726, 0.109803921568627, 1.0 ],
+					"maxclass" : "slider",
+					"mult" : 0.1,
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"parameter_enable" : 1,
+					"patching_rect" : [ 705.524084329605103, 75.147440433502197, 140.0, 20.0 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_longname" : "slider[3]",
+							"parameter_initial_enable" : 1,
+							"parameter_mmax" : 101.0,
+							"parameter_initial" : [ 100.0 ],
+							"parameter_shortname" : "slider",
+							"parameter_type" : 0
+						}
+
+					}
+,
+					"size" : 101.0,
+					"varname" : "slider[1]"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontface" : 1,
+					"fontsize" : 20.0,
+					"id" : "obj-127",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 630.211584329605103, 414.108827590942383, 270.0, 29.0 ],
+					"text" : "Slider branch",
+					"textjustification" : 1
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontface" : 1,
+					"fontsize" : 20.0,
+					"id" : "obj-126",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 189.115388870239258, 136.913699388504028, 270.0, 29.0 ],
+					"presentation_linecount" : 4,
+					"text" : "Arduino branch",
+					"textjustification" : 1
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"fontface" : 1,
 					"id" : "obj-29",
 					"linecount" : 2,
@@ -58,7 +130,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 736.253461661338861, 587.23077392578125, 60.223873491287122, 34.0 ],
+					"patching_rect" : [ 780.003459992408807, 591.397440433502197, 60.223873491287122, 34.0 ],
 					"presentation_linecount" : 2,
 					"text" : "Output:\n0 to 1000"
 				}
@@ -234,7 +306,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 646.461585998535156, 469.273326873779297, 185.0, 34.0 ],
+					"patching_rect" : [ 690.211584329605103, 473.439993381500244, 185.0, 34.0 ],
 					"presentation_linecount" : 3,
 					"text" : "Slider Input\n(In place of Arduino sensor)"
 				}
@@ -246,7 +318,7 @@
 					"maxclass" : "ezdac~",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 493.079229888916018, 958.523326873779297, 45.0, 45.0 ]
+					"patching_rect" : [ 493.079229888916018, 999.523326873779297, 45.0, 45.0 ]
 				}
 
 			}
@@ -257,7 +329,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 493.079229888916018, 881.273326873779297, 43.0, 22.0 ],
+					"patching_rect" : [ 493.079229888916018, 922.273326873779297, 43.0, 22.0 ],
 					"text" : "cycle~"
 				}
 
@@ -269,7 +341,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 550.690572826862308, 881.273326873779297, 192.792026343345697, 34.0 ],
+					"patching_rect" : [ 505.503461661338861, 886.273326873779297, 192.792026343345697, 34.0 ],
 					"presentation_linecount" : 3,
 					"text" : "Random Audio Output\n(just for demonstration purpose)"
 				}
@@ -353,51 +425,6 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-97",
-					"maxclass" : "ezdac~",
-					"numinlets" : 2,
-					"numoutlets" : 0,
-					"patching_rect" : [ 754.615398406982422, 183.38458251953125, 45.0, 45.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-95",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 751.615398406982422, 115.38458251953125, 29.5, 22.0 ],
-					"text" : "*~"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-94",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 751.615398406982422, 62.38458251953125, 66.0, 22.0 ],
-					"text" : "cycle~ 220"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-93",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 745.615398406982422, 32.38458251953125, 157.0, 20.0 ],
-					"text" : "Audio output (not impt)"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-90",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -434,13 +461,13 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-87",
-					"linecount" : 3,
+					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 154.115388870239258, 587.23077392578125, 90.0, 48.0 ],
-					"presentation_linecount" : 3,
-					"text" : "Output\n0: not pressed\n1: pressed"
+					"patching_rect" : [ 154.115388870239258, 587.23077392578125, 90.0, 34.0 ],
+					"presentation_linecount" : 2,
+					"text" : "Output\n0 to 1000"
 				}
 
 			}
@@ -585,8 +612,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "" ],
-					"patching_rect" : [ 302.615388870239258, 329.23077392578125, 77.0, 22.0 ],
-					"text" : "serial e 9600"
+					"patching_rect" : [ 302.615388870239258, 329.23077392578125, 74.0, 22.0 ],
+					"text" : "serial f 9600"
 				}
 
 			}
@@ -597,8 +624,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 681.461585998535156, 590.85577392578125, 50.0, 22.0 ],
-					"text" : "0"
+					"patching_rect" : [ 725.211584329605103, 595.022440433502197, 50.0, 22.0 ],
+					"text" : "47"
 				}
 
 			}
@@ -609,7 +636,7 @@
 					"numinlets" : 6,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 651.461585998535156, 547.23077392578125, 110.0, 22.0 ],
+					"patching_rect" : [ 695.211584329605103, 551.397440433502197, 110.0, 22.0 ],
 					"text" : "scale 0 255 0 1000"
 				}
 
@@ -625,7 +652,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 651.461585998535156, 516.35577392578125, 140.0, 20.0 ],
+					"patching_rect" : [ 695.211584329605103, 519.522440433502197, 140.0, 20.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_longname" : "slider",
@@ -657,6 +684,13 @@
 			}
  ],
 		"lines" : [ 			{
+				"patchline" : 				{
+					"destination" : [ "obj-130", 1 ],
+					"source" : [ "obj-129", 0 ]
+				}
+
+			}
+, 			{
 				"patchline" : 				{
 					"destination" : [ "obj-60", 1 ],
 					"order" : 1,
@@ -866,31 +900,9 @@
 				}
 
 			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-95", 0 ],
-					"source" : [ "obj-94", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-97", 1 ],
-					"order" : 0,
-					"source" : [ "obj-95", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-97", 0 ],
-					"order" : 1,
-					"source" : [ "obj-95", 0 ]
-				}
-
-			}
  ],
 		"parameters" : 		{
+			"obj-129" : [ "slider[3]", "slider", 0 ],
 			"obj-30" : [ "slider", "slider", 0 ],
 			"obj-27" : [ "slider[2]", "slider", 0 ],
 			"parameterbanks" : 			{
