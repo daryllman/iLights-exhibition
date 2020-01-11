@@ -72,7 +72,6 @@ if (rawLdr3Val < minLdr3) { rawLdr3Val = minLdr3; }
 int ldr1Val = map(rawLdr1Val, minLdr1, maxLdr1, 0, 1000); 
 int ldr2Val = map(rawLdr2Val, minLdr2, maxLdr2, 0, 1000); 
 int ldr3Val = map(rawLdr3Val, minLdr3, maxLdr3, 0, 1000); 
-int ldr4Val = 500; // TO BE CHANGED
 
 int outputLed1Val = map(ldr1Val, 0, 1000, 0, 255); // Re-map back to show intensity on LED
 int outputLed2Val = map(ldr2Val, 0, 1000, 0, 255); // Re-map back to show intensity on LED
@@ -88,9 +87,7 @@ Serial.print(ldr1Val);
 Serial.print(" ");
 Serial.print(ldr2Val);
 Serial.print(" ");
-Serial.print(ldr3Val);
-Serial.print(" ");
-Serial.println(ldr4Val);
+Serial.println(ldr3Val);
 
 
 
