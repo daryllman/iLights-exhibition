@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 205.0, 114.0, 870.0, 674.0 ],
+		"rect" : [ 40.0, 82.0, 1179.0, 715.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,13 +39,25 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"fontface" : 1,
+					"fontsize" : 16.0,
+					"id" : "obj-50",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 18.0, 16.0, 618.0, 25.0 ],
+					"text" : "Patcher to receive values from an arduino connected to 4 LDR sensors"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-49",
 					"linecount" : 3,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 594.0, 614.509917999999971, 146.0, 48.0 ],
-					"presentation_linecount" : 4,
 					"text" : "LDR4 is pseudo for now as I dont have an actual 4th LDR."
 				}
 
@@ -81,22 +93,21 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 749.0, 676.477325000000064, 100.0, 48.0 ],
-					"presentation_linecount" : 3,
+					"patching_rect" : [ 747.0, 683.477325000000064, 100.0, 48.0 ],
 					"text" : "Values are from 0 to 1000 (integers)"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"fontsize" : 16.0,
 					"id" : "obj-48",
-					"linecount" : 4,
+					"linecount" : 3,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 33.0, 35.0, 436.0, 75.0 ],
-					"presentation_linecount" : 4,
-					"text" : "Patcher to receive values from an arduino connected to a sensor (LDR, etc)\n- patcher will receive values from arduino through the Serial input\n- arduino will provide values of btwn 0 to 1000\n- the slider is provided as an alternative to simulate the value o/p from arduino\n"
+					"patching_rect" : [ 18.0, 43.0, 579.0, 62.0 ],
+					"text" : "- patcher will receive values from arduino through the Serial input\n- arduino will provide values of btwn 0 to 1000 for the 4 LDRs\n- note 4th ldr is pseudo - i sent a fixed value of 500 from arduino code"
 				}
 
 			}
@@ -134,7 +145,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 310.5, 355.0, 214.0, 48.0 ],
-					"presentation_linecount" : 3,
 					"text" : "a:0 to e:5\neg. if arduino is on port 2, \nchange to \"serial b 9600\" accordingly"
 				}
 
@@ -168,7 +178,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 120.5, 539.0, 51.0, 20.0 ],
-					"presentation_linecount" : 2,
 					"text" : "(ignore)"
 				}
 
