@@ -5,7 +5,7 @@
 
 
 // Connect LDR to Analog pins:  LDR1 TO A1, LDR2 TO A2, LDR3 TO A3.
-// Connect LED to Digital PWM Pins(Note this is optional - just to show the intensity of the ldr to output to LED): LED1 TO 9, LED2 TO 10, LED3 TO 11
+// Connect LED to Digital PWM Pins(Note this is optional - just for visual feed back of the intensity of the ldr that with the LEDs): LED1 TO 9, LED2 TO 10, LED3 TO 11
 
 // Calibrate the LDR values.
 // find the min and max ranges and update accordingly
@@ -23,7 +23,14 @@ const int led1Pin = 9;
 const int led2Pin = 10;
 const int led3Pin = 11;
 
-//CALIBRATION
+//CALIBRATION - varies depending on light condition of diff places (edit this first) 
+//Edit this if you realise the values are larger/smaller than you expect, depending on the light condition of the place
+//Base value is 100 -- adjust minutely - increase  if you want the output values to be large (brighter) ; decrease if you want the output values to be smaller (dimmer)
+//(Note that this just varies the min values of the 3 ldrs one shot)
+
+
+
+//CALIBRATION - for actual range
 //Tested Values are ---     most min (lowest it can get): abt 5-20,      min(covered with finger to top): abt 20,       max (with phone flash direct on it): abt 450-500
 int minLdr1 = 15; 
 int maxLdr1 = 450;
